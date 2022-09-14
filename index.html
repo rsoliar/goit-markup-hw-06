@@ -571,6 +571,27 @@
             <use href="./images/icons.svg#icon-modal-close-sign"></use>
           </svg>
         </button>
+        <form>
+          <label for="user_name">Ім'я</label>
+          <input type="text" name="name" id="user_name" autofocus />
+
+          <label for="user_phone">Телефон</label>
+          <input type="tel" name="phone" id="user_phone" autofocus />
+
+          <label for="user_email">Пошта</label>
+          <input type="email" name="email" id="user_email" autofocus />
+
+          <label for="user_comment">Коментар</label>
+          <textarea
+            rows="5"
+            cols="1"
+            autofocus
+            placeholder="Введіть текст"
+            resize="vertical"
+          ></textarea>
+
+          <button class="submit-modal-button" type="submit">Submit</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>

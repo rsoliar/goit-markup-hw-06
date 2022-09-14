@@ -494,7 +494,6 @@ p {
 }
 
 .portfolio-card {
-  text-align: center;
   width: 370px;
 }
 
@@ -745,6 +744,8 @@ p {
     visibility var(--transition-dur-and-func);
 }
 
+/* MODAL */
+
 .modal {
   width: 528px;
   height: 581px;
@@ -774,4 +775,27 @@ p {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+}
+
+.submit-modal-button {
+  background: var(--accent-color);
+  width: 200px;
+  height: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  /* display: flex;
+  align-items: center; */
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--primary-body-color);
+}
+
+.submit-modal-button:hover {
+  background: var(--hero-button-active);
 }
