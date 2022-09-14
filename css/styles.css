@@ -487,6 +487,7 @@ p {
 
 .footer-list {
   margin-top: 20px;
+  width: 231px;
 }
 
 .footer-contacts {
@@ -616,7 +617,7 @@ p {
   padding-left: 0;
   gap: 10px;
   margin-bottom: 0;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .flexdiv-address {
@@ -641,12 +642,13 @@ p {
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--primary-body-color);
+  margin-bottom: 20px;
 }
 
 .footer-container {
   display: flex;
-  gap: 70px;
   align-items: baseline;
+  justify-content: space-between;
 }
 
 .header-contacts {
@@ -754,6 +756,7 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 40px;
 }
 
 .modal-close {
@@ -778,24 +781,230 @@ p {
 }
 
 .submit-modal-button {
-  background: var(--accent-color);
+  background-color: var(--accent-color);
   width: 200px;
   height: 50px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-
   font-family: inherit;
   font-style: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  /* display: flex;
-  align-items: center; */
+  align-self: center;
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--primary-body-color);
+  transition: background-color var(--transition-dur-and-func);
+  border: none;
 }
 
 .submit-modal-button:hover {
-  background: var(--hero-button-active);
+  background-color: var(--hero-button-active);
+}
+
+/* MODAL FORM */
+
+.modal-title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--text-color);
+  margin-bottom: 12px;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-field-name {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 42px;
+  transition: border-color var(--transition-dur-and-func);
+  cursor: pointer;
+}
+
+.modal-field {
+  margin-bottom: 10px;
+}
+
+.modal-input-container {
+  position: relative;
+}
+
+.modal-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  transition: fill var(--transition-dur-and-func);
+}
+
+.modal-input:focus + .modal-icon {
+  fill: var(--accent-color);
+}
+
+.modal-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.modal-message {
+  width: 100%;
+  height: 120px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 12px;
+  transition: border-color var(--transition-dur-and-func);
+  cursor: pointer;
+}
+
+.modal-message:focus,
+.subscription-text-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.modal-message::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-check-icon {
+  height: 15px;
+  width: 16px;
+  border: 2px solid;
+  border-color: var(--black);
+  border-radius: 2px;
+  cursor: pointer;
+  margin-right: 9px;
+}
+
+.modal-check-icon-box {
+  display: none;
+}
+
+.modal-check-form:checked + .modal-check-icon {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.modal-check-form:checked + .modal-check-icon .modal-check-icon-box {
+  display: block;
+  fill: var(--primary-body-color);
+}
+
+.modal-check-form:focus + .modal-check-icon {
+  border-color: var(--accent-color);
+}
+
+.modal-check-form {
+  appearance: none;
+  position: absolute;
+}
+
+.modal-field-check {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.agreement-text {
+  font-weight: 400;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+}
+
+.agreement-link {
+  font-weight: 400;
+  line-height: 1.71;
+  text-decoration-line: underline;
+  color: var(--accent-color);
+}
+
+/* SUBSRIPTION FORM */
+
+.subscription-button {
+  width: 200px;
+  height: 50px;
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  transition: background-color var(--transition-dur-and-func);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--primary-body-color);
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 28px;
+  padding-right: 28px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.subscription-button:hover,
+.subscription-button:focus {
+  background-color: var(--hero-button-active);
+}
+
+.subscription-text-input {
+  width: 350px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: var(--footer-background-color);
+  padding: 15px;
+  color: var(--primary-body-color);
+  transition: border-color var(--transition-dur-and-func);
+}
+
+.subscription-container {
+  margin-left: 93px;
+}
+
+.footer-links {
+  margin-left: 70px;
+}
+
+/* .send-subscription-icon {
+  position: absolute;
+} */
+
+.subscription-form {
+  display: flex;
+  gap: 12px;
+}
+
+.send-subscription-icon {
+  fill: var(--primary-body-color);
 }

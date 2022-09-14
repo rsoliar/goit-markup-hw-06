@@ -351,6 +351,26 @@
             </li>
           </ul>
         </div>
+        <div class="subscription-container">
+          <p class="footer-social-title">Підпишіться на розсилку</p>
+          <form class="subscription-form">
+            <label>
+              <input
+                class="subscription-text-input"
+                type="email"
+                name="user_email"
+                pattern="/(^$|^.*@.*\..*$)/"
+                placeholder="E-mail"
+              />
+            </label>
+            <button class="subscription-button" type="submit">
+              Підписатися
+              <svg class="send-subscription-icon" width="24px" height="24px">
+                <use href="images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
   </body>
